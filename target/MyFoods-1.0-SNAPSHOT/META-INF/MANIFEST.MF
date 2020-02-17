@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: wl
+Build-Jdk: 13.0.1
+Implementation-Title: fifawu
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.timuwork
+Main-Class: ${start-class}
+
