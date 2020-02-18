@@ -139,6 +139,24 @@
     from TStudent LEFT JOIN TOrder ON TStudent.student_ID = TOrder.studentID and datediff(TOrder.orderDate,#{orderdate,jdbcType=TIMESTAMP})=0
     order by room_Position,student_Room
   </select>
+  <select id="selectAllStudentAll" resultMap="BaseResultMapWithOther">
+    <!--
+      wulong modified it
+    -->
+    select
+    orderID, studentID, orderTime,
+    orderDate, orderBreakfast, orderLA,
+    orderLB, orderLC, orderLCOLA,
+    orderLSP, orderLRICE, orderSA,
+    orderSB, orderSC, orderSCOLA,
+    orderSSP, orderSRICE,
+    student_Name,
+    student_Room,
+    room_Position,
+    student_College
+    from TStudent LEFT JOIN TOrder ON TStudent.student_ID = TOrder.studentID
+    order by TStudent.student_ID,TOrder.orderDate
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
       WARNING - @mbg.generated
