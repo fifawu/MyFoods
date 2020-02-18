@@ -1,6 +1,5 @@
 package com.timuwork.service;
 
-import com.timuwork.controller.viewobject.OrderWithNameVO;
 import com.timuwork.dataobject.OrderDO;
 import com.timuwork.dataobject.OrderWithNameDO;
 import com.timuwork.dataobject.OrderWithStuStatusDO;
@@ -13,4 +12,5 @@ public interface OrderService {
     List<OrderDO> getAllOrderById(int id);
     List<OrderWithNameDO> getOrderByDate(OrderDO orderDO);
     List<OrderWithStuStatusDO> getTodayStuStatus(OrderDO orderDO);
+    List<OrderWithNameDO> getAllStuDetail();
 }

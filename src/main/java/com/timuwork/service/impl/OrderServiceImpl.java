@@ -1,6 +1,5 @@
 package com.timuwork.service.impl;
 
-import com.timuwork.controller.viewobject.OrderWithNameVO;
 import com.timuwork.dao.OrderDOMapper;
 import com.timuwork.dataobject.OrderDO;
 import com.timuwork.dataobject.OrderWithNameDO;
@@ -47,6 +46,11 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<OrderWithStuStatusDO> getTodayStuStatus(OrderDO orderDO) {
         return orderDOMapper.selectStudentStatusByDate(orderDO);
+    }
+
+    @Override
+    public List<OrderWithNameDO> getAllStuDetail() {
+        return orderDOMapper.selectAllStudentAll();
     }
 
     public OrderModel convertFromDataObject(OrderDO orderDO){

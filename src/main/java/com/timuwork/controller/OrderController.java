@@ -113,4 +113,12 @@ public class OrderController {
         return orderWithStuStatusDOList;
     }
 
+    @RequestMapping("/getalldetail")
+    @ResponseBody
+    public List getAllDetail() {
+
+        List<OrderWithNameDO> orderWithNameDOList =orderService.getAllStuDetail();
+        return orderWithNameDOList;
+    }
+
 }

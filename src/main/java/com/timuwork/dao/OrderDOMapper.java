@@ -61,4 +61,5 @@ public interface OrderDOMapper {
     List<OrderDO> selectByStuId(int sid);
     List<OrderWithNameDO> selectByDate(OrderDO orderDO);
     List<OrderWithStuStatusDO> selectStudentStatusByDate(OrderDO orderDO);
+    List<OrderWithNameDO> selectAllStudentAll();
 }
